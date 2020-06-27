@@ -4,6 +4,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Container, Content, List, ListItem, Button } from "native-base";
 import Video, { FilterType } from "react-native-video";
+import HomeScreen from "./screens/HomeScreen";
+import AnotherScreen from "./screens/AnotherScreen";
 
 const VideoListScreen = ({navigation}) => {
   return (
@@ -68,7 +70,9 @@ const Stack = createStackNavigator();
 const Navigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Video List">
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen}/>
+        <Stack.Screen name="Another" component={AnotherScreen}/>
         <Stack.Screen name="Video List" component={VideoListScreen}/>
         <Stack.Screen name="Video Player" component={VideoPlayerScreen}/>
       </Stack.Navigator>
