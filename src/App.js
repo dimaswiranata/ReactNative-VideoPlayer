@@ -71,7 +71,10 @@ const Stack = createStackNavigator();
 const Navigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Video Player">
+      <Stack.Navigator 
+        initialRouteName="Video Player"
+        screenOptions={{ gestureEnabled: false, headerShown: false }}
+      >
         <Stack.Screen name="Home" component={HomeScreen}/>
         <Stack.Screen name="Another" component={AnotherScreen}/>
         <Stack.Screen name="Video List" component={VideoListScreen}/>
