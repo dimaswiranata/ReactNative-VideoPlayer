@@ -6,6 +6,7 @@ import { Container, Content, List, ListItem, Button } from "native-base";
 import Video, { FilterType } from "react-native-video";
 import HomeScreen from "./screens/HomeScreen";
 import AnotherScreen from "./screens/AnotherScreen";
+import VideoPlayer from "./screens/VideoPlayer";
 
 const VideoListScreen = ({navigation}) => {
   return (
@@ -70,11 +71,12 @@ const Stack = createStackNavigator();
 const Navigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Video Player">
         <Stack.Screen name="Home" component={HomeScreen}/>
         <Stack.Screen name="Another" component={AnotherScreen}/>
         <Stack.Screen name="Video List" component={VideoListScreen}/>
-        <Stack.Screen name="Video Player" component={VideoPlayerScreen}/>
+        {/* <Stack.Screen name="Video Player" component={VideoPlayerScreen}/> */}
+        <Stack.Screen name="Video Player" component={VideoPlayer}/>
       </Stack.Navigator>
     </NavigationContainer>
   )

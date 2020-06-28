@@ -3,8 +3,6 @@ import { Button, View } from 'react-native';
 
 import VideoPlayer from 'react-native-video-player';
 
-//unrecognized font family issue - fixed by react-native link then pod install
-
 export default class VideoPlayerWrapper extends Component {
 
     state = { playPressed: false };
